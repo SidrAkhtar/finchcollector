@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 class Finch: 
    def __init__(self, name, family, habitat, diet, price, lifespan):
@@ -12,14 +11,14 @@ class Finch:
 
 finches = [
    Finch('Blue Finch', 'Thraupidae', 'Dry Savannah', 'Seeds, insects and plant matter', '$20-$40', '5-10 years'),
-   Finch('Purple Finch', 'suburbs, groves, and woods', 'Dry Savannah', 'Seeds(of elm, and ash and so on), berries, small fruits, buds,  insects', '$55-$150', '5-9 years on average'),
+   Finch('Purple Finch', 'Fringillidae', 'Suburbs, groves, and woods', 'Seeds(of elm, and ash and so on), berries, small fruits, buds,  insects', '$55-$150', '5-9 years on average'),
 ]
 
 
 # Create your views here.
 # Define the home view
 def home(request):
-   return HttpResponse('<h1>Home Page</h1>')
+   return render(request, 'home.html')
 
 def about(request):
    return render(request, 'about.html')
