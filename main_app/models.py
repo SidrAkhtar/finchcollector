@@ -7,5 +7,8 @@ class Finch(models.Model):
    family = models.CharField(max_length=100)
    habitat = models.CharField(max_length=200)
    diet = models.TextField(max_length=250)
-   price = models.IntegerField()
+   price = models.CharField(max_length=50)
    lifespan = models.CharField(max_length=100)
+
+   def __str__(self):
+      return self.name
