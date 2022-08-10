@@ -12,6 +12,10 @@
          <p>Price: {{ finch.price }}</p>
          <p>Lifespan: {{ finch.lifespan }}</p>
    </div>
+   <div class="card-action">
+      <a href="{% url 'finches_update' finch.id %}">Edit</a>
+      <a href="{% url 'finches_delete' finch.id %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}
