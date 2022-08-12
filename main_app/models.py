@@ -29,6 +29,8 @@ class Finch(models.Model):
    diet = models.TextField(max_length=250)
    price = models.CharField(max_length=50)
    lifespan = models.CharField(max_length=100)
+   # Add the M:M relationship
+   toys = models.ManyToManyField(Toy)
 
    def __str__(self):
       return f'{self.name} ({self.id})'
